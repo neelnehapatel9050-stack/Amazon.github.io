@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sign Up</title>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000); // Redirect after 2 seconds
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-image: url("af_pc_2x._CB792409181_.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .logo {
+            background-image: url("download.png");
+            background-size: cover;
+            height: 50px;
+            width: 120px;
+            margin: 0 auto 20px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .success-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .success-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .signup-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #febd68;
+            border: none;
+            border-radius: 4px;
+            color: #0f1111;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .signup-btn:hover {
+            background-color: #f7a733;
+        }
+        .login-container {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .signin-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #febd68;
+            border: none;
+            border-radius: 4px;
+            color: #0f1111;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .signin-btn:hover {
+            background-color: #f7a733;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus, textarea:focus {
+            border-color: #febd68;
+            outline: none;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+        .signin-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #febd68;
+            border: none;
+            border-radius: 4px;
+            color: #0f1111;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .signin-btn:hover {
+            background-color: #f7a733;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            color: #007185;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo"></div>
+        <h1>Sign In</h1>
+        <form action="#" method="post" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+        <div id="success-message" class="success-message">Sign In Successful! Redirecting to home page...</div>
+        <div class="links">
+            <a href="#">Forgot Password?</a>
+            <p>New to Amazon? <a href="#">Create your Amazon account</a></p>
+        </div>
+    </div>
+</body>
+</html>
